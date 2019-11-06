@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-diff --git a/src/main.c b/src/main.c
-index 4c4ed4f..43cbd73 100644
---- a/src/main.c
-+++ b/src/main.c
-@@ -2,4 +2,5 @@
- void main()
- {
-        printf("\n Hello Espl\n");
-+       printf("\n new line\n");
- }
-\ No newline at end of file
-=======
 diff --cc README.md
 index 18b2c03,f3a9ba1..0000000
 --- a/README.md
@@ -230,4 +217,3 @@ index 1186700,c815c6e..0000000
 +   return 0;
 ++>>>>>>> unknown_features
   }
->>>>>>> conflicts
