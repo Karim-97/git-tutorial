@@ -56,6 +56,7 @@ CMAKE_BINARY_DIR = /DIST/home/lab_espl_stud06/ESPL_code/git-tutorial/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+<<<<<<< HEAD
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -67,6 +68,8 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+=======
+>>>>>>> conflicts
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -78,6 +81,20 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+<<<<<<< HEAD
+=======
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/opt/cmake-3.7.2-Linux-x86_64/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+>>>>>>> conflicts
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /DIST/home/lab_espl_stud06/ESPL_code/git-tutorial/build/CMakeFiles /DIST/home/lab_espl_stud06/ESPL_code/git-tutorial/build/CMakeFiles/progress.marks
@@ -111,6 +128,7 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+<<<<<<< HEAD
 # Target rules for targets named ESPL_LIB
 
 # Build rule for target.
@@ -162,6 +180,59 @@ lib/espl_lib.s: lib/espl_lib.c.s
 lib/espl_lib.c.s:
 	$(MAKE) -f CMakeFiles/ESPL_LIB.dir/build.make CMakeFiles/ESPL_LIB.dir/lib/espl_lib.c.s
 .PHONY : lib/espl_lib.c.s
+=======
+# Target rules for targets named STATES_LIB
+
+# Build rule for target.
+STATES_LIB: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 STATES_LIB
+.PHONY : STATES_LIB
+
+# fast build rule for target.
+STATES_LIB/fast:
+	$(MAKE) -f CMakeFiles/STATES_LIB.dir/build.make CMakeFiles/STATES_LIB.dir/build
+.PHONY : STATES_LIB/fast
+
+#=============================================================================
+# Target rules for targets named state_machine
+
+# Build rule for target.
+state_machine: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 state_machine
+.PHONY : state_machine
+
+# fast build rule for target.
+state_machine/fast:
+	$(MAKE) -f CMakeFiles/state_machine.dir/build.make CMakeFiles/state_machine.dir/build
+.PHONY : state_machine/fast
+
+lib/states.o: lib/states.c.o
+
+.PHONY : lib/states.o
+
+# target to build an object file
+lib/states.c.o:
+	$(MAKE) -f CMakeFiles/STATES_LIB.dir/build.make CMakeFiles/STATES_LIB.dir/lib/states.c.o
+.PHONY : lib/states.c.o
+
+lib/states.i: lib/states.c.i
+
+.PHONY : lib/states.i
+
+# target to preprocess a source file
+lib/states.c.i:
+	$(MAKE) -f CMakeFiles/STATES_LIB.dir/build.make CMakeFiles/STATES_LIB.dir/lib/states.c.i
+.PHONY : lib/states.c.i
+
+lib/states.s: lib/states.c.s
+
+.PHONY : lib/states.s
+
+# target to generate assembly for a file
+lib/states.c.s:
+	$(MAKE) -f CMakeFiles/STATES_LIB.dir/build.make CMakeFiles/STATES_LIB.dir/lib/states.c.s
+.PHONY : lib/states.c.s
+>>>>>>> conflicts
 
 src/main.o: src/main.c.o
 
@@ -169,7 +240,11 @@ src/main.o: src/main.c.o
 
 # target to build an object file
 src/main.c.o:
+<<<<<<< HEAD
 	$(MAKE) -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/src/main.c.o
+=======
+	$(MAKE) -f CMakeFiles/state_machine.dir/build.make CMakeFiles/state_machine.dir/src/main.c.o
+>>>>>>> conflicts
 .PHONY : src/main.c.o
 
 src/main.i: src/main.c.i
@@ -178,7 +253,11 @@ src/main.i: src/main.c.i
 
 # target to preprocess a source file
 src/main.c.i:
+<<<<<<< HEAD
 	$(MAKE) -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/src/main.c.i
+=======
+	$(MAKE) -f CMakeFiles/state_machine.dir/build.make CMakeFiles/state_machine.dir/src/main.c.i
+>>>>>>> conflicts
 .PHONY : src/main.c.i
 
 src/main.s: src/main.c.s
@@ -187,15 +266,49 @@ src/main.s: src/main.c.s
 
 # target to generate assembly for a file
 src/main.c.s:
+<<<<<<< HEAD
 	$(MAKE) -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+=======
+	$(MAKE) -f CMakeFiles/state_machine.dir/build.make CMakeFiles/state_machine.dir/src/main.c.s
+.PHONY : src/main.c.s
+
+src/my_states.o: src/my_states.c.o
+
+.PHONY : src/my_states.o
+
+# target to build an object file
+src/my_states.c.o:
+	$(MAKE) -f CMakeFiles/state_machine.dir/build.make CMakeFiles/state_machine.dir/src/my_states.c.o
+.PHONY : src/my_states.c.o
+
+src/my_states.i: src/my_states.c.i
+
+.PHONY : src/my_states.i
+
+# target to preprocess a source file
+src/my_states.c.i:
+	$(MAKE) -f CMakeFiles/state_machine.dir/build.make CMakeFiles/state_machine.dir/src/my_states.c.i
+.PHONY : src/my_states.c.i
+
+src/my_states.s: src/my_states.c.s
+
+.PHONY : src/my_states.s
+
+# target to generate assembly for a file
+src/my_states.c.s:
+	$(MAKE) -f CMakeFiles/state_machine.dir/build.make CMakeFiles/state_machine.dir/src/my_states.c.s
+.PHONY : src/my_states.c.s
+
+>>>>>>> conflicts
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+<<<<<<< HEAD
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ESPL_LIB"
@@ -206,6 +319,21 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+=======
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... STATES_LIB"
+	@echo "... state_machine"
+	@echo "... lib/states.o"
+	@echo "... lib/states.i"
+	@echo "... lib/states.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/my_states.o"
+	@echo "... src/my_states.i"
+	@echo "... src/my_states.s"
+>>>>>>> conflicts
 .PHONY : help
 
 
